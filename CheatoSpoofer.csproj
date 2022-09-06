@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{B52B9A58-7E44-496D-968F-63C6E282C941}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CheatoClient</RootNamespace>
+    <AssemblyName>CheatoSpoofer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>CheatoSpoofer.ico</ApplicationIcon>
+    <StartupObject>CheatoClient.Program</StartupObject>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\Debug\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\Debug\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry">
+      <HintPath>..\Debug\Sentry.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.UI">
+      <HintPath>..\Debug\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation">
+      <HintPath>..\Debug\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="XanderUI">
+      <HintPath>..\Debug\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AmsiBypass.cs" />
+    <Compile Include="AntiAttach.cs" />
+    <Compile Include="AntiDebugger.cs" />
+    <Compile Include="AntiDump.cs" />
+    <Compile Include="AntiReverserTools.cs" />
+    <Compile Include="AntiSandBox.cs" />
+    <Compile Include="AntiSniff.cs" />
+    <Compile Include="AntiVirtualMachine.cs" />
+    <Compile Include="Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checks.cs" />
+    <Compile Include="Cleaner.cs" />
+    <Compile Include="DebugObjectInformationClass.cs" />
+    <Compile Include="encryption.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="GigaChadMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GigaChadMessageBox.Designer.cs">
+      <DependentUpon>GigaChadMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gofile.cs" />
+    <Compile Include="InitiateUnfender.cs" />
+    <Compile Include="Is64BitChecker.cs" />
+    <Compile Include="json_wrapper.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="NtStatus.cs" />
+    <Compile Include="PEB_OFFSET.cs" />
+    <Compile Include="ProcessInfoClass.2.cs" />
+    <Compile Include="PROCESSINFOCLASS.cs" />
+    <Compile Include="ProcessUtilities.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="RunningProcess.cs" />
+    <Compile Include="SavedOptions.cs" />
+    <Compile Include="ShitAuth.cs" />
+    <Compile Include="SMBIOS.cs" />
+    <Compile Include="SpoofWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpoofWindow.Designer.cs">
+      <DependentUpon>SpoofWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringCipher.cs" />
+    <Compile Include="SystemInformationClass.cs" />
+    <Compile Include="SystemKernelDebuggerInformation.cs" />
+    <Compile Include="ThreadAccess.cs" />
+    <Compile Include="ThreadInformationClass.cs" />
+    <Compile Include="TokenManipulation.cs" />
+    <Compile Include="VM.cs" />
+    <Compile Include="Windows.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Auth.resources" />
+    <EmbeddedResource Include="GigaChadMessageBox.resources" />
+    <EmbeddedResource Include="Main.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="SpoofWindow.resources" />
+    <EmbeddedResource Include="windows-loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

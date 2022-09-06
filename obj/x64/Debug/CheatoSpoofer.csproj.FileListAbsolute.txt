@@ -1,0 +1,2 @@
+C:\Users\Respe\Desktop\CheatoSpoofer\obj\x64\Debug\CheatoSpoofer.csproj.AssemblyReference.cache
+C:\Users\Respe\Desktop\CheatoSpoofer\obj\x64\Debug\CheatoSpoofer.csproj.CoreCompileInputs.cache
